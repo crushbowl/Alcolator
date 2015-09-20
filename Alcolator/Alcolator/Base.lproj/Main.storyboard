@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beo-bC-Klh">
-                                <rect key="frame" x="279" y="383" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAp-iA-vM5">
                                 <rect key="frame" x="33" y="28" width="534" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -31,23 +25,34 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="4cp-ui-sgW">
                                 <rect key="frame" x="31" y="66" width="538" height="31"/>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj8-Bn-B5I">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj8-Bn-B5I">
                                 <rect key="frame" x="225" y="114" width="150" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beo-bC-Klh">
+                                <rect key="frame" x="33" y="171" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="beo-bC-Klh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="0Yj-mI-8ic"/>
                             <constraint firstItem="tAp-iA-vM5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0ba-R6-0dr"/>
+                            <constraint firstItem="beo-bC-Klh" firstAttribute="top" secondItem="Nj8-Bn-B5I" secondAttribute="bottom" constant="27" id="F5J-pS-h96"/>
                             <constraint firstItem="4cp-ui-sgW" firstAttribute="top" secondItem="tAp-iA-vM5" secondAttribute="bottom" constant="8" id="K8o-EA-PYH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tAp-iA-vM5" secondAttribute="trailing" constant="13" id="PZJ-Sk-pk8"/>
                             <constraint firstItem="4cp-ui-sgW" firstAttribute="centerX" secondItem="tAp-iA-vM5" secondAttribute="centerX" id="RpG-24-suP"/>
                             <constraint firstItem="tAp-iA-vM5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="cTt-FQ-b1t"/>
+                            <constraint firstItem="Nj8-Bn-B5I" firstAttribute="top" secondItem="4cp-ui-sgW" secondAttribute="bottom" constant="18" id="dwy-sf-mdV"/>
+                            <constraint firstItem="Nj8-Bn-B5I" firstAttribute="centerX" secondItem="4cp-ui-sgW" secondAttribute="centerX" id="iTo-np-eRR"/>
                             <constraint firstItem="4cp-ui-sgW" firstAttribute="width" secondItem="tAp-iA-vM5" secondAttribute="width" id="kmO-M9-8oA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="beo-bC-Klh" secondAttribute="trailing" constant="15" id="uDW-vh-uMR"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="XRX-8Z-oXk" appends="YES" id="Okx-wH-nsq"/>
