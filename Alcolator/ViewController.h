@@ -17,6 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
+@property (nonatomic) float result;
+
 
 - (void)buttonPressed:(UIButton *) sender;
 

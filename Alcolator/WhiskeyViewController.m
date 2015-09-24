@@ -35,6 +35,9 @@
     
     float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
     
+    super.result = numberOfWhiskeyGlassesForEquivalentAlcoholAmount;
+    
+    
     NSString *beerText;
     
     if (numberOfBeers == 1) {
@@ -42,7 +45,7 @@
         
     } else {
 
-        beerText = NSLocalizedString(@"beer", @"plural of beer");
+        beerText = NSLocalizedString(@"beers", @"plural of beer");
         
     }
     
@@ -58,9 +61,11 @@
         
     }
     
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of whiskey.", nil), numberOfBeers, beerText, [self.beerPercentTextField.text floatValue], numberOfWhiskeyGlassesForEquivalentAlcoholAmount, whiskeyText];
     
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of whiskey.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], numberOfWhiskeyGlassesForEquivalentAlcoholAmount, whiskeyText];
     self.resultLabel.text = resultText;
+    
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%.1f", super.result]];
     
 }
 
